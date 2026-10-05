@@ -35,8 +35,7 @@ jobs:
         shell: powershell
         run: |
           npm ci --ignore-scripts
-          node node_modules/electron/install.js
-          node node_modules/electron-winstaller/script/select-7z-arch.js
+          npm rebuild electron electron-winstaller
 
       - name: Build RazerTaskbarSetup_${{ github.ref_name }}.exe
         shell: powershell

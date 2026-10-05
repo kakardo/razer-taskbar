@@ -44,8 +44,7 @@ This is expected. The exe is unsigned (no paid code-signing certificate), so Win
 `canvas` is only needed for `npm run image-gen` and does not build on newer Node versions, so install scripts are skipped and the required ones are run manually:
 
 * `npm ci --ignore-scripts`
-* `node node_modules/electron/install.js`
-* `node node_modules/electron-winstaller/script/select-7z-arch.js`
+* `npm rebuild electron electron-winstaller`
 * `npm run make`
 * Setup exe will be created in the `out\make` directory.
 
